@@ -1,19 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom'
+import EventComponent from './events/EventComponent';
+import LoginBright from './LoginBright/LoginBright';
+import GuestList from './state/GuestList'
+import UserSearch from './refs/UserSearch';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const users = [
+  { name: 'Sarah', age: 20 },
+  { name: 'Alex', age: 20 },
+  { name: 'Michael', age: 20 },
+];
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const App = () => {
+  return (<div>
+    {/* <GuestList /> */}
+    {/* <UserSearch /> */}
+    {/* <EventComponent /> */}
+    <UserSearch />
+  </div>);
+}
+
+ReactDOM.render(
+  <App />,
+  document.querySelector('#root')
+)

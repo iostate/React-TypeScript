@@ -12,14 +12,7 @@ const EventComponent = () => {
 
   const onDragStart = (event: React.DragEvent<HTMLDivElement>) => {
     console.log(event);
-
   };
-
-  // const onDrag = (event: React.DragEvent<HTMLDivElement>) => {
-  //   console.log(`X, Y: ${event.clientX},  ${event.clientY}`);
-  //   const pos = { x: event.clientX, y: event.clientY };
-  //   setPos(pos);
-  // }
 
   const onDragEnd = (event: React.DragEvent<HTMLDivElement>) => {
     console.log(`X, Y: ${event.clientX},  ${event.clientY}`);
@@ -28,12 +21,8 @@ const EventComponent = () => {
     setPoss([...poss, pos]);
     console.log(poss);
   }
-
-
-
   return (
     <>
-
       <input onChange={onChange} />
       <div className="draggables">
         <div draggable onDragStart={onDragStart}>
